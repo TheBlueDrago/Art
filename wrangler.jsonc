@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare Pages project. Pushing to the main branch on GitHub deploys it.
+  "name": "art",
+  "pages_build_output_dir": "./public",
+  "compatibility_date": "2026-09-01",
+
+  // All store data (paintings, photos, orders, messages, settings) lives in
+  // this one D1 database. Tables are created automatically on the first
+  // request (see src/lib/db.js), so there is no migration step.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "art-db",
+      "database_id": "d378fef1-6f5b-4060-81a5-a288c373a41e"
+    }
+  ]
+}

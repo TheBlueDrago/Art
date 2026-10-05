@@ -1,0 +1,4 @@
+# Copy this file to .dev.vars for local development (it is git-ignored).
+# SETUP_KEY is the one-time key needed to create the owner account at /admin.
+# In production, add it as a secret: npx wrangler secret put SETUP_KEY
+SETUP_KEY=local-dev-setup-key
